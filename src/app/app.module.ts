@@ -5,12 +5,16 @@ import { RoutingModule } from './app.routes';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { MovieListComponent } from './movie-list/movie-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    HomepageComponent
+    HomepageComponent,
+    MovieDetailComponent,
+    MovieListComponent
   ],
   imports: [
     BrowserModule,

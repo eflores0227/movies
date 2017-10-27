@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from '../models/movie';
 
 @Component({
   selector: 'app-homepage',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+  public movieList: Array<Movie>;
+  public searchText: string;
+  title = 'WTT';
 
   constructor() { }
 

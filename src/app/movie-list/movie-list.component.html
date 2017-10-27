@@ -1,0 +1,11 @@
+<div>
+  <input type="text"
+              placeholder="Search List"
+              class="filter-input"
+              [(ngModel)]="searchText">
+  <ul>
+    <li *ngFor="let movie of movies | searchBy: ['title']: [searchText]">
+      <a routerLink="/movies/{{ movie.id }}">{{ movie.title }}</a>
+    </li>
+  </ul>
+</div>

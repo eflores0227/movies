@@ -1,7 +1,16 @@
-<div style="text-align:center">
-  <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Werkin'
-  </h1>
-</div>
+  <div style="text-align:center">
+    <h1>
+      welcome to {{ title }}
+    </h1>
+  </div>
+  <div>
+    <input type="text"
+                  placeholder="Search List"
+                  class="filter-input"
+                  [(ngModel)]="searchText">
+    <ul>
+      <li *ngFor="let movie of movieList | searchBy: ['title']: [searchText]">
+        <a routerLink="/movie/{{ movie.id }}">{{ movie.title }}</a>
+      </li>
+    </ul>
+  </div>
